@@ -1,12 +1,12 @@
-Python RSA Implementation:
+# Python RSA Implementation:
 This project is a simple implementation of RSA encryption and decryption in Python, built as a part of the CS1702 (Network Security) coursework in the 6th Semester. The aim is to break down the core mechanics of RSA without hiding behind bulky libraries — making the cryptographic math transparent and easy to follow.
 
-Aim:
+#Aim:
 The primary goal was to implement the RSA in Python, to gain a practical understanding of key generation, encryption and decryption.
 
-Implementation Overview:
+## Implementation Overview:
 
-Key Generation:
+## Key Generation:
 
 Randomly generate two large prime numbers (p and q).
 
@@ -16,21 +16,21 @@ Select a public exponent e such that 1 < e < ϕ(n) and gcd(e, ϕ(n)) = 1.
 
 Calculate the private exponent d, the modular inverse of e mod ϕ(n).
 
-Encryption:
+## Encryption:
 
 Each character of the plaintext is converted to its ASCII value.
 
 Encryption is performed using:
 cipher = (messageᵉ) mod n
 
-Decryption:
+## Decryption:
 
 Each element of the ciphertext is decrypted using:
 message = (cipherᵈ) mod n
 
 ASCII values are then converted back to characters.
 
-Key Components
+## Key Components
 
 generate_prime(bits): Generates a prime number of specified bit size using the sympy library.
 
@@ -44,7 +44,7 @@ encrypt(plaintext, public_key): Encrypts a string into a list of integers.
 
 decrypt(ciphertext, private_key): Decrypts a list of integers back into a readable string.
 
-Results:
+## Results:
 
 The program successfully generates public and private keys for a user-defined key length (512, 1024, or 2048 bits), encrypts a message, and decrypts it back to its original form.
 Both encryption and decryption are demonstrated on user input, verifying the correctness of the implementation.
